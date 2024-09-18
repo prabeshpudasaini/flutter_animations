@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/basic_animation/basic_animation_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,20 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Animation'),
       ),
+      body: ListView(children: [
+        Card(
+          child: ListTile(
+            title: const Text('Basic Animation'),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) {
+                  return const BasicAnimationView();
+                },
+              ));
+            },
+          ),
+        ),
+      ]),
     );
   }
 }

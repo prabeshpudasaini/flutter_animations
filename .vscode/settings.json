@@ -6,10 +6,12 @@
         "autocorrect",
         "autofocus",
         "Firestore",
+        "myapp",
         "riverpod",
         "Signup",
         "typedefs",
-        "unfocus"
+        "unfocus",
+        "vsync"
     ],
     "dart.documentation": "full",
     //Dart Settings
