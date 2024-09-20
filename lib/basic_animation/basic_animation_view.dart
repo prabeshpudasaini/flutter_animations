@@ -49,8 +49,8 @@ class _BasicAnimationViewState extends State<BasicAnimationView>
                 alignment: Alignment.center,
                 transform: Matrix4.identity()..rotateY(_animation.value),
                 child: Container(
-                  width: 100,
-                  height: 100,
+                  width: 200,
+                  height: 200,
                   decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(10),

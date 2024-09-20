@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/basic_animation/basic_animation_view.dart';
+import 'package:flutter_animation/chained_explicit_animations/chained_explicit_animations_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +12,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Animation',
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        brightness: Brightness.light,
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      themeMode: ThemeMode.dark,
+
+      debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
   }
@@ -44,6 +54,18 @@ class _HomePageState extends State<HomePage> {
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) {
                   return const BasicAnimationView();
+                },
+              ));
+            },
+          ),
+        ),
+        Card(
+          child: ListTile(
+            title: const Text('Chained Explicit Animation'),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) {
+                  return const ChainedExplicitAnimationsView();
                 },
               ));
             },
