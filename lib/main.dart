@@ -3,6 +3,7 @@ import 'package:flutter_animation/3d_animation/three_dimensional_animation_view.
 import 'package:flutter_animation/basic_animation/basic_animation_view.dart';
 import 'package:flutter_animation/chained_explicit_animations/chained_explicit_animations_view.dart';
 import 'package:flutter_animation/hero_animation/hero_animation_view.dart';
+import 'package:flutter_animation/implicit_animation/implicit_animation_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -93,6 +94,18 @@ class _HomePageState extends State<HomePage> {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) {
                     return const HeroAnimationView();
+                  },
+                ));
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: const Text('Implicit Animation'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    return const ImplicitAnimationView();
                   },
                 ));
               },
