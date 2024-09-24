@@ -19,14 +19,9 @@ const people = [
   Person(name: 'Jack', age: 22, emoji: '👨'),
 ];
 
-class HeroAnimationView extends StatefulWidget {
+class HeroAnimationView extends StatelessWidget {
   const HeroAnimationView({super.key});
 
-  @override
-  State<HeroAnimationView> createState() => _HeroAnimationViewState();
-}
-
-class _HeroAnimationViewState extends State<HeroAnimationView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
