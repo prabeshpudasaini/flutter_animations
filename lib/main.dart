@@ -4,6 +4,7 @@ import 'package:flutter_animation/basic_animation/basic_animation_view.dart';
 import 'package:flutter_animation/chained_explicit_animations/chained_explicit_animations_view.dart';
 import 'package:flutter_animation/hero_animation/hero_animation_view.dart';
 import 'package:flutter_animation/implicit_animation/implicit_animation_view.dart';
+import 'package:flutter_animation/tween_animation/tween_animation_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,6 +107,18 @@ class _HomePageState extends State<HomePage> {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) {
                     return const ImplicitAnimationView();
+                  },
+                ));
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: const Text('Tween Animation'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    return const TweenAnimationView();
                   },
                 ));
               },
