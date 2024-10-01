@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/3d_animation/three_dimensional_animation_view.dart';
 import 'package:flutter_animation/3d_drawer/drawer_view.dart';
+import 'package:flutter_animation/animated_prompt/animated_prompt_view.dart';
 import 'package:flutter_animation/basic_animation/basic_animation_view.dart';
 import 'package:flutter_animation/chained_explicit_animations/chained_explicit_animations_view.dart';
 import 'package:flutter_animation/custom_painter/custom_painter_view.dart';
@@ -145,6 +146,18 @@ class _HomePageState extends State<HomePage> {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) {
                     return const DrawerView();
+                  },
+                ));
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: const Text('Animated Prompt'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    return const AnimatedPromptView();
                   },
                 ));
               },
